@@ -1,0 +1,23 @@
+guid: 286eb098c94ab0e66d47
+installation_schema_version: "1.7"
+infrastructure:
+  type: vsphere
+  vm_password_type: generate
+  locked: true
+  director_configuration:
+    bosh_recreate_on_next_deploy: false
+    resurrector_enabled: true
+    ntp_servers:
+    - 10.65.163.2
+    blobstore_type: local
+    database_type: internal
+    s3_blobstore_options:
+      signature_version: "2"
+    hm_pager_duty_options:
+      enabled: false
+    hm_emailer_options:
+      enabled: false
+      tls: false
+      recipients:
+        value: null
+
