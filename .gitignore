@@ -38,3 +38,4 @@ plugins/
 plugin/cfopsplugin/sample/sample
 /vendor
 binary/
+.idea
