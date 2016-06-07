@@ -1,0 +1,10 @@
+This is a very simple utility to convert a json document to a yaml form.
+
+It makes use of the fact that Json is essentially Yaml, it loads up a json document and then prints it back in a yaml form
+
+To run it:
+[source]
+----
+go build
+./json2yaml -j sample.json
+----
