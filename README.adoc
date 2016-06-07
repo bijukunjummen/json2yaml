@@ -8,3 +8,32 @@ To run it:
 go build
 ./json2yaml -j sample.json
 ----
+
+You start say with :
+[source]
+----
+{
+  "akey": "avalue",
+  "alist": [
+    "one", "two"
+  ],
+  "anIntegerList":[
+    1, 2, 3, 4
+  ]
+}
+
+----
+
+and end up with:
+[source]
+----
+akey: avalue
+alist:
+- one
+- two
+anIntegerList:
+- 1
+- 2
+- 3
+- 4
+----
