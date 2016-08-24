@@ -1,4 +1,5 @@
 package main
+
 import (
 	"gopkg.in/yaml.v2"
 )
@@ -9,10 +10,10 @@ func ConvertToYaml(json string) (string, error) {
 		return "", err
 	}
 
-	yamlBytes, errOnMarshal := yaml.Marshal(jsonDatastructure)
+	yamlBytes, err := yaml.Marshal(jsonDatastructure)
 
-	if errOnMarshal != nil {
-		return "", errOnMarshal
+	if err != nil {
+		return "", err
 	}
 
 	return string(yamlBytes[:]), nil

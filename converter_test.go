@@ -1,8 +1,8 @@
 package main
 
 import (
-	"testing"
 	"strings"
+	"testing"
 )
 
 func TestConvertToYaml(t *testing.T) {
@@ -15,11 +15,11 @@ func TestConvertToYaml(t *testing.T) {
 
 	yaml, err := ConvertToYaml(json)
 
-	if (err != nil) {
+	if err != nil {
 		t.Error(err)
 	}
 
-	if (!strings.HasPrefix(yaml, "hm_emailer_options")) {
+	if !strings.HasPrefix(yaml, "hm_emailer_options") {
 		t.Errorf("Bad prefix. Expected %v, Got %v!", "hm_emailer_options", yaml)
 	}
 }
